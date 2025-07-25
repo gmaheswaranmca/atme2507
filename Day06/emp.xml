@@ -1,0 +1,18 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<employees>
+    <employee>
+        <name>Mahesh</name>
+        <age>46</age>
+        <job_title>DETrainer</job_title>
+    </employee>
+    <employee>
+        <name>Rakshith</name>
+        <age>23</age>
+        <job_title>DETrainer</job_title>
+    </employee>
+    <employee>
+        <name>Mahadev</name>
+        <age>20</age>
+        <job_title>DETrainee</job_title>
+    </employee>
+</employees>
