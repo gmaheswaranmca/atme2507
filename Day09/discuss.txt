@@ -1,0 +1,26 @@
+https://jsonplaceholder.typicode.com/
+
+/posts
+/albums
+/todos
+/users
+/photos
+/comments
+
+/todos POST -- add todo 
+	{"userId":1, "title": "someTitle", "completed": false}
+/todos GET  -- read all todos 
+/todos/6 GET -- read by id = 6
+/todos/6 PUT -- update by id = 6
+	{"userId":1, "title": "someNewTitle", "completed": true}
+/todos/6 DELETE -- delete by id=6
+
+$ pip list
+...
+requests 
+...
+
+if not there,
+use: $ pip install requests
+
+https://api.openweathermap.org/data/2.5/weather?q=Mysore&appid=39be8355f4c2b070862ba7ea33d969fa
