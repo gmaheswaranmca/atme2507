@@ -1,0 +1,66 @@
+C:\mywork\source\workspaces\mtd2507>mongosh "mongodb+srv://cluster0.slxn7ab.mongodb.net/" --apiVersion 1 --username gmaheswaranmca
+Enter password: ***********
+Current Mongosh Log ID: 68886386f4d261b5f1eec4a8
+Connecting to:          mongodb+srv://<credentials>@cluster0.slxn7ab.mongodb.net/?appName=mongosh+2.5.6Using MongoDB:          8.0.11 (API Version 1)
+Using Mongosh:          2.5.6
+
+For mongosh info see: https://www.mongodb.com/docs/mongodb-shell/
+
+Atlas atlas-e6mk6a-shard-0 [primary] test> show dbs
+admin  356.00 KiB
+local   23.35 GiB
+Atlas atlas-e6mk6a-shard-0 [primary] test> use todos_app_db
+switched to db todos_app_db
+Atlas atlas-e6mk6a-shard-0 [primary] todos_app_db> db
+todos_app_db
+Atlas atlas-e6mk6a-shard-0 [primary] todos_app_db> show dbs
+admin  356.00 KiB
+local   23.35 GiB
+Atlas atlas-e6mk6a-shard-0 [primary] todos_app_db> db.todos.insertOne({userId:1, title:'Mongo installation and setup', completed: false})
+{
+  acknowledged: true,
+  insertedId: ObjectId('6888653ef4d261b5f1eec4a9')
+}
+Atlas atlas-e6mk6a-shard-0 [primary] todos_app_db> show db
+MongoshInvalidInputError: [COMMON-10001] 'db' is not a valid argument for "show".
+Atlas atlas-e6mk6a-shard-0 [primary] todos_app_db> show dbs
+todos_app_db   40.00 KiB
+admin         356.00 KiB
+local          23.35 GiB
+Atlas atlas-e6mk6a-shard-0 [primary] todos_app_db> show collections
+todos
+Atlas atlas-e6mk6a-shard-0 [primary] todos_app_db> db.todos.find()
+[
+  {
+Atlas atlas-e6mk6a-shard-0 [primary] todos_app_db> db.todos.insertOne({userId:1, title:'Learning Mongo DB', completed:false})
+{
+  acknowledged: true,
+  insertedId: ObjectId('688867eff4d261b5f1eec4aa')
+}
+Atlas atlas-e6mk6a-shard-0 [primary] todos_app_db> db.todos.find()
+[
+  {
+    _id: ObjectId('6888653ef4d261b5f1eec4a9'),
+    userId: 1,
+    title: 'Mongo installation and setup',
+    completed: false
+  },
+  {
+    _id: ObjectId('688867eff4d261b5f1eec4aa'),
+    userId: 1,
+    title: 'Learning Mongo DB',
+    completed: false
+  }
+]
+Atlas atlas-e6mk6a-shard-0 [primary] todos_app_db> db.todos.find({_id:'6888653ef4d261b5f1eec4a9'})
+
+Atlas atlas-e6mk6a-shard-0 [primary] todos_app_db> db.todos.find({_id:ObjectId('6888653ef4d261b5f1eec4a9')})
+[
+  {
+    _id: ObjectId('6888653ef4d261b5f1eec4a9'),
+    userId: 1,
+    title: 'Mongo installation and setup',
+    completed: false
+  }
+]
+Atlas atlas-e6mk6a-shard-0 [primary] todos_app_db>
