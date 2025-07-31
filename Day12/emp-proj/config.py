@@ -1,7 +1,7 @@
 config = {
     'emp_csv_url': "https://raw.githubusercontent.com/gmaheswaranmca/atme2507/main/Day08/de/qn01/emp.csv",
     'emp_csv_file': "./data/raw/employees.csv",
-    'mongo_db_uri': "mongodb+srv://mahesh:12345@cluster0.wkvfjw4.mongodb.net/",
+    'mongo_db_uri': "mongodb+srv://username:password@server_nameOf_mongodb_net/",
     'lake_db_name': "emp_lake_db",
     'warehouse_db_name': "emp_warehouse_db",
     'lake_employees_collection': "employees",
